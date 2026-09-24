@@ -57,13 +57,19 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased max-w-4xl mx-auto py-12 sm:py-24 px-6",
+          "min-h-screen bg-background font-sans antialiased relative",
           fontSans.variable
         )}
       >
+        {/* Subtle 2026 ambient background glow */}
+        <div className="fixed inset-0 -z-10 pointer-events-none overflow-hidden">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-gradient-to-b from-cyan-500/10 via-emerald-500/5 to-transparent blur-3xl opacity-60 dark:opacity-30" />
+        </div>
         <ThemeProvider attribute="class" defaultTheme="light">
           <TooltipProvider delayDuration={0}>
-            {children}
+            <div className="max-w-4xl mx-auto py-12 sm:py-20 px-6 relative">
+              {children}
+            </div>
             <Navbar />
           </TooltipProvider>
         </ThemeProvider>
