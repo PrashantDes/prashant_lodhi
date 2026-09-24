@@ -24,25 +24,6 @@ Turning raw transactional data into clean insights, interactive dashboards, and 
 - **[Hospitality Data Analysis](https://github.com/PrashantDes/hotel-hospitality-analysis)** — Python and Pandas analysis of more than 134,500 booking records to identify revenue leakage
 - **[Expense Tracking System](https://github.com/PrashantDes/expense-tracking-system)** — Personal finance application built with FastAPI, MySQL, and Streamlit
 
-## This portfolio
-
-This website showcases my analytics projects, technical writing, resources, experience, education, and skills.
-
-### Built with
-
-- Next.js 14 and TypeScript
-- Tailwind CSS and shadcn/ui
-- Framer Motion and Magic UI
-- MDX with unified and rehype-pretty-code
-
-## Run locally
-
-```bash
-pnpm install
-pnpm dev
-```
-
-Open [http://localhost:3000](http://localhost:3000).
 
 ## Contact
 
