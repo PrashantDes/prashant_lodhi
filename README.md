@@ -1,22 +1,41 @@
-# Prashant Lodhi — Portfolio
+<div align="center">
 
-My personal portfolio website for showcasing data analytics projects, dashboards, and technical writing.
+# Prashant Lodhi
 
-## What's inside
+**Data Analyst & Business Intelligence Specialist** · Gurgaon, India
 
-- **Home** — about me, work experience, education, skills, and featured projects
-- **Blog** — technical articles written in MDX (npm publishing, CI/CD, JWT auth, and more)
-- **Resources** — tools, references, and learning material I use and recommend
-- Dark mode, smooth scroll animations, and a fully responsive layout
+Turning raw transactional data into clean insights, interactive dashboards, and better business decisions.
 
-## Tech stack
+[LinkedIn](https://www.linkedin.com/in/prashant-lodhi-527412417/) · [Email](mailto:prashantlodhi1920@gmail.com) · [GitHub](https://github.com/PrashantDes)
 
-- [Next.js 14](https://nextjs.org/) (App Router) with TypeScript
-- [Tailwind CSS](https://tailwindcss.com/) + [shadcn/ui](https://ui.shadcn.com/)
-- [Framer Motion](https://www.framer.com/motion/) + [Magic UI](https://magicui.design/) for animations
-- MDX for blog content, rendered with `unified`/`rehype-pretty-code`
+</div>
 
-## Running locally
+## About me
+
+- M.Sc. in Biotechnology from Dr. Bhim Rao Ambedkar University
+- Applying scientific controls, empirical rigor, and hypothesis testing to data analytics
+- Working with Power BI, DAX, Power Query, MySQL, Python, Pandas, and NumPy
+- Experience modeling Finance, Sales, Marketing, Supply Chain, and Operations domains
+- Analyzed more than 134,500 transactional records for revenue optimization and occupancy patterns
+
+## Featured projects
+
+- **[Business Insight 360](https://github.com/PrashantDes/business-insight-360)** — Enterprise Power BI dashboard covering five business domains with dynamic DAX measures and star-schema modeling
+- **[Hospitality Data Analysis](https://github.com/PrashantDes/hotel-hospitality-analysis)** — Python and Pandas analysis of more than 134,500 booking records to identify revenue leakage
+- **[Expense Tracking System](https://github.com/PrashantDes/expense-tracking-system)** — Personal finance application built with FastAPI, MySQL, and Streamlit
+
+## This portfolio
+
+This website showcases my analytics projects, technical writing, resources, experience, education, and skills.
+
+### Built with
+
+- Next.js 14 and TypeScript
+- Tailwind CSS and shadcn/ui
+- Framer Motion and Magic UI
+- MDX with unified and rehype-pretty-code
+
+## Run locally
 
 ```bash
 pnpm install
@@ -25,10 +44,8 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
-To add a blog post, drop a new `.mdx` file in `content/` with `title`, `publishedAt`, and `summary` frontmatter. Projects, work experience, and skills are all edited in one place: `src/data/resume.tsx`.
-
 ## Contact
 
-- GitHub: [@PrashantDes](https://github.com/PrashantDes)
 - LinkedIn: [prashant-lodhi-527412417](https://www.linkedin.com/in/prashant-lodhi-527412417/)
-- Email: contact.chahar@gmail.com
+- Email: [prashantlodhi1920@gmail.com](mailto:prashantlodhi1920@gmail.com)
+- GitHub: [@PrashantDes](https://github.com/PrashantDes)
