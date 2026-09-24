@@ -2,7 +2,7 @@
 
 # Prashant Lodhi
 
-**Data Analyst & Business Intelligence Specialist** · Gurgaon, India
+**Data Analyst & Business Intelligence Specialist** · Agra, India
 
 Turning raw transactional data into clean insights, interactive dashboards, and better business decisions.
 
