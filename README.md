@@ -1,6 +1,6 @@
 # Prashant Lodhi — Portfolio
 
-My personal portfolio website. Live at [iamsurajchahar.vercel.app](https://iamsurajchahar.vercel.app/).
+My personal portfolio website for showcasing data analytics projects, dashboards, and technical writing.
 
 ## What's inside
 
