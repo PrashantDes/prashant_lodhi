@@ -1,4 +1,4 @@
-# Suraj Singh Chahar — Portfolio
+# Prashant Lodhi — Portfolio
 
 My personal portfolio website. Live at [iamsurajchahar.vercel.app](https://iamsurajchahar.vercel.app/).
 
@@ -29,6 +29,6 @@ To add a blog post, drop a new `.mdx` file in `content/` with `title`, `publishe
 
 ## Contact
 
-- GitHub: [@iamsurajchahar](https://github.com/iamsurajchahar)
-- LinkedIn: [imsurajchahar](https://www.linkedin.com/in/imsurajchahar/)
+- GitHub: [@PrashantDes](https://github.com/PrashantDes)
+- LinkedIn: [prashant-lodhi-527412417](https://www.linkedin.com/in/prashant-lodhi-527412417/)
 - Email: contact.chahar@gmail.com

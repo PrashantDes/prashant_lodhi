@@ -26,7 +26,7 @@ export default function Navbar() {
                     buttonVariants({ variant: "ghost", size: "icon" }),
                     "size-12"
                   )}
-                  rel={item.label === "Home" || item.label === "Blog" ? undefined : "noopener noreferrer"}
+                  rel={item.label === "Home" ? undefined : "noopener noreferrer"}
                    >
                   <item.icon className="size-4" />
                 </Link>
