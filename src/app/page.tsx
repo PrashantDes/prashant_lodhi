@@ -51,15 +51,15 @@ export default async function Page() {
 
               <BlurFade delay={BLUR_FADE_DELAY * 2}>
                 <div className="flex flex-wrap items-center gap-2 pt-3">
-                  <Link
-                    href="/resume"
+                  <a
+                    href="/Prashant_Lodhi_Resume.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 rounded-lg bg-foreground text-background px-4 py-2 text-sm font-semibold hover:opacity-90 transition-all shadow-sm"
                   >
                     <FileText className="size-4" />
                     Resume
-                  </Link>
+                  </a>
 
                   <CopyEmailButton email={DATA.contact.email} variant="pill" />
 
