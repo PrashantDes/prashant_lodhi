@@ -21,11 +21,11 @@ export default function ResumePage() {
           <p className="mt-1 text-sm text-muted-foreground">{DATA.location}</p>
         </div>
         <a
-          href="/Prashant_Lodhi_Resume.docx"
+          href="/Prashant_Lodhi_Resume.pdf"
           download
           className="inline-flex w-fit rounded-lg border px-4 py-2 text-sm font-semibold transition-colors hover:bg-muted"
         >
-          Download DOCX
+          Download PDF
         </a>
       </div>
 
