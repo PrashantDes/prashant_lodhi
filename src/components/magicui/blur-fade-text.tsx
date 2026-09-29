@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { AnimatePresence, motion, Variants } from "framer-motion";
+import { AnimatePresence, motion, useReducedMotion, Variants } from "framer-motion";
 import { useMemo } from "react";
 
 interface BlurFadeTextProps {
@@ -21,11 +21,13 @@ const BlurFadeText = ({
   text,
   className,
   variant,
+  duration = 0.4,
   characterDelay = 0.03,
   delay = 0,
   yOffset = 8,
   animateByCharacter = false,
 }: BlurFadeTextProps) => {
+  const shouldReduceMotion = useReducedMotion();
   const defaultVariants: Variants = {
     hidden: { y: yOffset, opacity: 0, filter: "blur(8px)" },
     visible: { y: -yOffset, opacity: 1, filter: "blur(0px)" },
@@ -45,8 +47,8 @@ const BlurFadeText = ({
               exit="hidden"
               variants={combinedVariants}
               transition={{
-                yoyo: Infinity,
-                delay: delay + i * characterDelay,
+                duration: shouldReduceMotion ? 0 : duration,
+                delay: shouldReduceMotion ? 0 : delay + i * characterDelay,
                 ease: "easeOut",
               }}
               className={cn("inline-block", className)}
@@ -69,8 +71,8 @@ const BlurFadeText = ({
           exit="hidden"
           variants={combinedVariants}
           transition={{
-            yoyo: Infinity,
-            delay,
+            duration: shouldReduceMotion ? 0 : duration,
+            delay: shouldReduceMotion ? 0 : delay,
             ease: "easeOut",
           }}
           className={cn("inline-block", className)}

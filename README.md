@@ -21,6 +21,7 @@ Turning raw transactional data into clean insights, interactive dashboards, and 
 ## Featured projects
 
 - **[Business Insight 360](https://github.com/PrashantDes/business-insight-360)** — Enterprise Power BI dashboard covering five business domains with dynamic DAX measures and star-schema modeling
+- **[WaveCon 5G Impact Analysis](https://github.com/PrashantDes/WaveCon_5G_Impact_Analysis)** — Power BI business analysis and PowerPoint presentation of a 5G launch across revenue, ARPU, churn, market share, prepaid plans, and 15 cities
 - **[Hospitality Data Analysis](https://github.com/PrashantDes/hotel-hospitality-analysis)** — Python and Pandas analysis of more than 134,500 booking records to identify revenue leakage
 - **[Expense Tracking System](https://github.com/PrashantDes/expense-tracking-system)** — Personal finance application built with FastAPI, MySQL, and Streamlit
 

@@ -59,6 +59,7 @@ export const DATA = {
         "Microsoft Excel (Advanced)",
         "Executive Dashboards",
         "Data Storytelling",
+        "Stakeholder Reporting",
       ],
     },
     {
@@ -100,6 +101,8 @@ export const DATA = {
         "Hypothesis Testing",
         "Data Cleaning & Audits",
         "Root Cause Analysis",
+        "Churn & Retention Analysis",
+        "Market Share Analysis",
       ],
     },
   ],
@@ -210,6 +213,34 @@ export const DATA = {
         {
           type: "Source",
           href: "https://github.com/PrashantDes/business-insight-360",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
+      title: "WaveCon 5G Impact Analysis",
+      href: "https://github.com/PrashantDes/WaveCon_5G_Impact_Analysis",
+      dates: "2026",
+      active: true,
+      featured: false,
+      impact: "Telecom BI Case Study · Power BI + PowerPoint Presentation",
+      description:
+        "A Power BI business analysis and PowerPoint presentation of WaveCon's 5G launch, comparing revenue, ARPU, active users, unsubscribes, market share, and prepaid-plan performance before and after the rollout. The analysis turns city- and plan-level findings into retention, win-back, and product recommendations.",
+      technologies: [
+        "Microsoft Power BI",
+        "Power Query",
+        "DAX",
+        "PowerPoint",
+        "KPI Analysis",
+        "Churn & Retention",
+        "Market Share",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/PrashantDes/WaveCon_5G_Impact_Analysis",
           icon: <Icons.github className="size-3" />,
         },
       ],

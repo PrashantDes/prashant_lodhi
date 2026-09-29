@@ -7,7 +7,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import { ArrowUpRight, BarChart3, Database, LineChart, Sparkles } from "lucide-react";
+import { ArrowUpRight, BarChart3, Database, LineChart, RadioTower, Sparkles } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import Markdown from "react-markdown";
@@ -32,6 +32,50 @@ interface Props {
 }
 
 function ProjectGraphicFallback({ title }: { title: string }) {
+  if (title.toLowerCase().includes("wavecon")) {
+    return (
+      <div className="relative flex h-44 w-full flex-col justify-between overflow-hidden border-b border-border/40 bg-gradient-to-br from-neutral-900 via-neutral-950 to-neutral-900 p-4 text-white select-none">
+        <div className="absolute inset-0 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:16px_16px] opacity-15" />
+
+        <div className="relative flex items-center justify-between">
+          <div className="inline-flex items-center gap-1.5 rounded-full border border-sky-400/30 bg-sky-400/10 px-2.5 py-0.5 text-[11px] font-medium text-sky-200">
+            <RadioTower className="size-3" />
+            <span>Power BI 5G Impact Analysis</span>
+          </div>
+          <span className="text-[10px] font-mono text-neutral-400">Power BI + PowerPoint</span>
+        </div>
+
+        <div className="relative grid grid-cols-3 gap-2">
+          <div className="rounded-lg border border-neutral-700/60 bg-neutral-800/80 p-2">
+            <p className="text-[10px] text-neutral-400">Revenue</p>
+            <p className="text-sm font-bold text-white">5G rollout</p>
+            <span className="text-[9px] text-sky-300">City comparison</span>
+          </div>
+          <div className="rounded-lg border border-neutral-700/60 bg-neutral-800/80 p-2">
+            <p className="text-[10px] text-neutral-400">ARPU</p>
+            <p className="text-sm font-bold text-white">Plan mix</p>
+            <span className="text-[9px] text-sky-300">Prepaid analysis</span>
+          </div>
+          <div className="rounded-lg border border-neutral-700/60 bg-neutral-800/80 p-2">
+            <p className="text-[10px] text-neutral-400">Retention</p>
+            <p className="text-sm font-bold text-white">Churn risk</p>
+            <span className="text-[9px] text-sky-300">Win-back focus</span>
+          </div>
+        </div>
+
+        <div className="relative flex h-7 items-end gap-1.5 pt-1">
+          {[38, 48, 43, 61, 58, 73, 69, 88, 82, 96, 92].map((height, index) => (
+            <div
+              key={index}
+              style={{ height: `${height}%` }}
+              className="flex-1 rounded-t bg-gradient-to-t from-blue-700/55 to-sky-300/95 transition-all hover:to-sky-200"
+            />
+          ))}
+        </div>
+      </div>
+    );
+  }
+
   if (title.toLowerCase().includes("business insight") || title.toLowerCase().includes("power bi")) {
     return (
       <div className="relative h-44 w-full overflow-hidden bg-gradient-to-br from-neutral-900 via-neutral-950 to-neutral-900 p-4 text-white flex flex-col justify-between border-b border-border/40 select-none">
