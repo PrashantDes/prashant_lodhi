@@ -224,7 +224,7 @@ export function ProjectCard({
   return (
     <Card
       className={cn(
-        "group relative flex flex-col overflow-hidden rounded-xl border border-border/70 bg-card/50 backdrop-blur-sm transition-all duration-300 hover:border-foreground/20 hover:shadow-xl hover:-translate-y-1 h-full",
+        "glass-panel group relative flex h-full flex-col overflow-hidden rounded-xl border transition-all duration-300 hover:-translate-y-1 hover:border-foreground/30 hover:shadow-xl",
         featured && "sm:col-span-2",
         className
       )}

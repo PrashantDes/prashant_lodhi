@@ -61,13 +61,10 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        {/* Subtle 2026 ambient background glow */}
-        <div className="fixed inset-0 -z-10 pointer-events-none overflow-hidden">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-gradient-to-b from-cyan-500/10 via-emerald-500/5 to-transparent blur-3xl opacity-60 dark:opacity-30" />
-        </div>
-        <ThemeProvider attribute="class" defaultTheme="light">
+        <div className="portfolio-atmosphere" aria-hidden="true" />
+        <ThemeProvider attribute="class" defaultTheme="dark">
           <TooltipProvider delayDuration={0}>
-            <div className="max-w-4xl mx-auto py-12 sm:py-20 px-6 relative">
+            <div className="relative z-10 mx-auto max-w-4xl px-6 py-12 sm:py-20">
               {children}
             </div>
             <Navbar />

@@ -55,20 +55,24 @@ export default async function Page() {
                     href="/Prashant_Lodhi_Resume.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-lg bg-foreground text-background px-4 py-2 text-sm font-semibold hover:opacity-90 transition-all shadow-sm"
+                    className="glass-button inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold text-foreground"
                   >
                     <FileText className="size-4" />
                     Resume
                   </a>
 
-                  <CopyEmailButton email={DATA.contact.email} variant="pill" />
+                  <CopyEmailButton
+                    email={DATA.contact.email}
+                    variant="pill"
+                    className="glass-button"
+                  />
 
                   <Link
                     href={DATA.contact.social.GitHub.url}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="GitHub"
-                    className="inline-flex size-9 items-center justify-center rounded-lg border border-border/80 text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
+                    className="glass-button inline-flex size-9 items-center justify-center text-muted-foreground hover:text-foreground"
                   >
                     <Icons.github className="size-4" />
                   </Link>
@@ -78,7 +82,7 @@ export default async function Page() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="LinkedIn"
-                    className="inline-flex size-9 items-center justify-center rounded-lg border border-border/80 text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
+                    className="glass-button inline-flex size-9 items-center justify-center text-muted-foreground hover:text-foreground"
                   >
                     <Icons.linkedin className="size-4" />
                   </Link>
@@ -103,7 +107,7 @@ export default async function Page() {
 
           {/* 2026 QUANTITATIVE METRICS BAR */}
           <BlurFade delay={BLUR_FADE_DELAY * 2.5}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 rounded-2xl border border-border/70 bg-card/40 p-4 sm:p-5 backdrop-blur-md shadow-sm">
+            <div className="glass-panel grid grid-cols-2 gap-3 rounded-2xl border p-4 shadow-sm sm:gap-4 sm:p-5 md:grid-cols-4">
               {DATA.metrics.map((metric, idx) => (
                 <div
                   key={idx}
@@ -132,7 +136,7 @@ export default async function Page() {
             <h2 className="text-xl font-bold tracking-tight">About</h2>
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 4}>
-            <div className="rounded-xl border border-border/60 bg-card/30 p-5 backdrop-blur-sm">
+            <div className="glass-panel rounded-xl border p-5">
               <Markdown className="prose max-w-full text-pretty font-sans text-sm sm:text-base text-muted-foreground dark:prose-invert leading-relaxed">
                 {DATA.summary}
               </Markdown>
@@ -160,7 +164,7 @@ export default async function Page() {
                   key={skillGroup.category}
                   delay={BLUR_FADE_DELAY * 6 + id * 0.05}
                 >
-                  <div className="group flex flex-col justify-between h-full rounded-xl border border-border/70 bg-card/50 p-4 sm:p-5 backdrop-blur-sm transition-all duration-300 hover:border-foreground/20 hover:shadow-md">
+                  <div className="glass-panel group flex h-full flex-col justify-between rounded-xl border p-4 transition-all duration-300 hover:border-foreground/30 hover:shadow-md sm:p-5">
                     <div className="space-y-2">
                       <div className="flex items-center gap-2">
                         <div className="rounded-lg bg-primary/10 p-2 text-primary">
@@ -243,7 +247,7 @@ export default async function Page() {
                 href="https://github.com/PrashantDes"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg border border-border/80 bg-card/60 px-5 py-2.5 text-sm font-semibold hover:bg-accent hover:border-foreground/20 transition-all shadow-sm"
+                className="glass-button inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold"
               >
                 <Icons.github className="size-4" />
                 <span>Explore More on GitHub</span>
@@ -277,7 +281,7 @@ export default async function Page() {
                   <div className="flex size-7 sm:size-8 shrink-0 items-center justify-center rounded-full bg-background border-2 border-emerald-500 text-[10px] sm:text-xs font-mono font-bold text-emerald-600 dark:text-emerald-400 shadow-sm z-10">
                     {step.stage}
                   </div>
-                  <div className="flex-1 rounded-xl border border-border/60 bg-card/40 p-4 sm:p-5 backdrop-blur-sm space-y-1.5">
+                  <div className="glass-panel flex-1 space-y-1.5 rounded-xl border p-4 sm:p-5">
                     <div className="flex flex-wrap items-center justify-between gap-1.5">
                       <h3 className="text-base font-bold text-foreground">
                         {step.title}
@@ -332,7 +336,7 @@ export default async function Page() {
       {/* CONTACT SECTION */}
       <section id="contact">
         <BlurFade delay={BLUR_FADE_DELAY * 15}>
-          <div className="rounded-2xl border border-border/70 bg-gradient-to-b from-card/60 to-card/30 p-6 sm:p-10 backdrop-blur-md text-center space-y-5">
+          <div className="glass-panel space-y-5 rounded-2xl border p-6 text-center sm:p-10">
             <div className="inline-flex items-center gap-1.5 rounded-full border border-border bg-background px-3 py-1 text-xs text-muted-foreground">
               <MapPin className="size-3 text-cyan-500" />
               <span>{DATA.location}</span>
@@ -348,13 +352,17 @@ export default async function Page() {
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
-              <CopyEmailButton email={DATA.contact.email} variant="pill" />
+              <CopyEmailButton
+                email={DATA.contact.email}
+                variant="pill"
+                className="glass-button"
+              />
 
               <Link
                 href={DATA.contact.social.LinkedIn.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg border border-border px-4 py-2 text-sm font-medium hover:bg-accent transition-colors"
+                className="glass-button inline-flex items-center gap-2 px-4 py-2 text-sm font-medium"
               >
                 <Icons.linkedin className="size-4" />
                 <span>LinkedIn</span>
@@ -364,7 +372,7 @@ export default async function Page() {
                 href={DATA.contact.social.WhatsApp.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg border border-border px-4 py-2 text-sm font-medium hover:bg-accent transition-colors"
+                className="glass-button inline-flex items-center gap-2 px-4 py-2 text-sm font-medium"
               >
                 <Icons.whatsapp className="size-4" />
                 <span>WhatsApp</span>
