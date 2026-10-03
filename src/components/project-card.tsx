@@ -224,7 +224,7 @@ export function ProjectCard({
   return (
     <Card
       className={cn(
-        "glass-panel group relative flex h-full flex-col overflow-hidden rounded-xl border transition-all duration-300 hover:-translate-y-1 hover:border-foreground/30 hover:shadow-xl",
+        "glass-panel group relative flex h-full flex-col overflow-hidden rounded-xl border transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg",
         featured && "sm:col-span-2",
         className
       )}
@@ -271,13 +271,13 @@ export function ProjectCard({
               </CardTitle>
               <ArrowUpRight className="size-4 opacity-0 -translate-y-0.5 translate-x-0.5 transition-all group-hover/title:opacity-100" />
             </Link>
-            <span className="font-mono text-[11px] text-muted-foreground shrink-0 rounded-md bg-muted px-2 py-0.5">
+            <span className="font-mono text-[11px] text-muted-foreground shrink-0">
               {dates}
             </span>
           </div>
 
           {impact && (
-            <div className="inline-flex items-center gap-1.5 text-xs font-medium text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded-md w-fit">
+            <div className="inline-flex items-center gap-1.5 text-xs font-medium text-primary bg-primary/10 border border-primary/15 px-2 py-0.5 rounded-md w-fit">
               <Sparkles className="size-3" />
               <span>{impact}</span>
             </div>
@@ -321,7 +321,7 @@ export function ProjectCard({
                 className={cn(
                   "inline-flex items-center gap-1.5 rounded-lg border px-2.5 py-1 text-xs font-medium transition-all duration-200",
                   item.type === "Source"
-                    ? "border-black bg-black text-white hover:border-black hover:bg-black hover:text-white"
+                    ? "border-primary bg-primary text-primary-foreground hover:border-primary/90 hover:bg-primary/90 hover:text-primary-foreground"
                     : "border-border/80 text-muted-foreground hover:border-foreground/20 hover:bg-accent hover:text-foreground"
                 )}
               >

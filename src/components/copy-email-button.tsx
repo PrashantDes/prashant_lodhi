@@ -69,7 +69,7 @@ export function CopyEmailButton({
         </button>
       </TooltipTrigger>
       <TooltipContent>
-        <p>{copied ? "Copied to clipboard!" : `Copy ${email}`}</p>
+        <p>{copied ? "Copied to clipboard!" : "Copy email address"}</p>
       </TooltipContent>
     </Tooltip>
   );

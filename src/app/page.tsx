@@ -11,7 +11,6 @@ import {
   ArrowUpRight,
   FileText,
   MapPin,
-  Sparkles,
 } from "lucide-react";
 import Link from "next/link";
 import Markdown from "react-markdown";
@@ -27,13 +26,14 @@ export default async function Page() {
           <div className="flex flex-col-reverse sm:flex-row gap-6 sm:gap-4 sm:items-center sm:justify-between">
             <div className="flex flex-col flex-1 space-y-2">
               <BlurFade delay={BLUR_FADE_DELAY}>
-                <div className="inline-flex w-fit items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-xs font-medium text-emerald-700 dark:text-emerald-300">
-                  <span className="relative flex size-2">
-                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-                    <span className="relative inline-flex size-2 rounded-full bg-emerald-500" />
+                <p className="inline-flex items-center gap-2 text-sm font-medium text-primary">
+                  <span
+                    aria-hidden="true"
+                    className="inline-flex size-2 animate-[heartbeat_1.2s_ease-in-out_infinite] rounded-full bg-emerald-500 motion-reduce:animate-none"
+                  >
                   </span>
-                  Open to Data Analyst & BI Roles
-                </div>
+                  Open to new opportunities
+                </p>
               </BlurFade>
 
               <BlurFadeText
@@ -63,7 +63,7 @@ export default async function Page() {
 
                   <CopyEmailButton
                     email={DATA.contact.email}
-                    variant="pill"
+                    variant="icon"
                     className="glass-button"
                   />
 
@@ -92,7 +92,7 @@ export default async function Page() {
 
             <BlurFade delay={BLUR_FADE_DELAY}>
               <div className="relative group self-start sm:self-center">
-                <div className="absolute -inset-0.5 rounded-full bg-gradient-to-tr from-cyan-500 to-emerald-500 opacity-40 blur-md group-hover:opacity-75 transition duration-500" />
+                <div className="absolute -inset-0.5 rounded-full bg-primary/25 opacity-40 blur-md transition duration-500 group-hover:opacity-75" />
                 <Avatar className="size-28 sm:size-32 border-2 border-background relative shadow-md">
                   <AvatarImage
                     alt={DATA.name}
@@ -105,13 +105,12 @@ export default async function Page() {
             </BlurFade>
           </div>
 
-          {/* 2026 QUANTITATIVE METRICS BAR */}
           <BlurFade delay={BLUR_FADE_DELAY * 2.5}>
             <div className="glass-panel grid grid-cols-2 gap-3 rounded-2xl border p-4 shadow-sm sm:gap-4 sm:p-5 md:grid-cols-4">
               {DATA.metrics.map((metric, idx) => (
                 <div
                   key={idx}
-                  className="flex flex-col space-y-1 border-r last:border-r-0 border-border/40 pr-2"
+                  className="flex flex-col space-y-1 border-r border-border/60 pr-2 even:border-r-0 md:even:border-r md:last:border-r-0"
                 >
                   <span className="font-mono text-xl sm:text-2xl font-bold tracking-tight text-foreground">
                     {metric.value}
@@ -141,7 +140,7 @@ export default async function Page() {
                 className="prose max-w-full text-pretty font-sans text-sm sm:text-base text-muted-foreground dark:prose-invert leading-relaxed"
                 components={{
                   strong: ({ children }) => (
-                    <strong className="font-semibold text-black dark:text-white">
+                      <strong className="font-semibold text-foreground">
                       {children}
                     </strong>
                   ),
@@ -154,15 +153,11 @@ export default async function Page() {
         </div>
       </section>
 
-      {/* SKILLS SECTION - 2026 CAPABILITY CARDS */}
       <section id="skills">
         <div className="flex min-h-0 flex-col gap-y-4">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
             <div className="flex items-center justify-between">
-              <h2 className="text-xl font-bold tracking-tight">Technical Arsenal</h2>
-              <span className="text-xs font-mono text-muted-foreground">
-                Core Competencies
-              </span>
+              <h2 className="text-xl font-bold tracking-tight">Capabilities</h2>
             </div>
           </BlurFade>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -193,7 +188,7 @@ export default async function Page() {
                         <Badge
                           key={skill}
                           variant="secondary"
-                          className="rounded-md border-black bg-black px-2 py-0.5 text-[11px] font-normal text-white transition-colors hover:bg-black hover:text-white"
+                          className="rounded-md border-primary/15 bg-primary/10 px-2 py-0.5 text-[11px] font-medium text-primary transition-colors hover:bg-primary/15 hover:text-primary"
                         >
                           {skill}
                         </Badge>
@@ -207,21 +202,14 @@ export default async function Page() {
         </div>
       </section>
 
-      {/* FEATURED PROJECTS - BENTO GRID */}
       <section id="projects">
         <div className="space-y-6 w-full">
           <BlurFade delay={BLUR_FADE_DELAY * 8}>
-            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2 border-b border-border/60 pb-3">
-              <div>
-                <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary mb-1">
-                  <Sparkles className="size-3" />
-                  Portfolio Showcase
-                </div>
-                <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
-                  Featured Projects
-                </h2>
-              </div>
-              <p className="text-xs sm:text-sm text-muted-foreground max-w-sm">
+            <div className="space-y-2 border-b border-border/60 pb-4 text-center">
+              <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
+                Featured Projects
+              </h2>
+              <p className="mx-auto max-w-xl text-base text-muted-foreground">
                 Real-world analytics pipelines, BI dashboards, and reproducible Python analysis.
               </p>
             </div>
@@ -280,14 +268,14 @@ export default async function Page() {
           </BlurFade>
 
           <div className="relative pl-2 sm:pl-4 space-y-6 pt-2">
-            <div className="absolute left-[17px] sm:left-[25px] top-4 bottom-4 w-px bg-gradient-to-b from-cyan-500 via-emerald-500 to-border" />
+            <div className="absolute left-[17px] sm:left-[25px] top-4 bottom-4 w-px bg-border" />
             {DATA.journey.map((step, id) => (
               <BlurFade
                 key={step.title}
                 delay={BLUR_FADE_DELAY * 13 + id * 0.06}
               >
                 <div className="relative flex items-start gap-4">
-                  <div className="flex size-7 sm:size-8 shrink-0 items-center justify-center rounded-full bg-background border-2 border-emerald-500 text-[10px] sm:text-xs font-mono font-bold text-emerald-600 dark:text-emerald-400 shadow-sm z-10">
+                  <div className="flex size-7 sm:size-8 shrink-0 items-center justify-center rounded-full bg-background border-2 border-primary text-[10px] sm:text-xs font-mono font-bold text-primary shadow-sm z-10">
                     {step.stage}
                   </div>
                   <div className="glass-panel flex-1 space-y-1.5 rounded-xl border p-4 sm:p-5">
@@ -297,7 +285,7 @@ export default async function Page() {
                       </h3>
                       <Badge
                         variant="outline"
-                        className="text-[10px] font-mono border-emerald-500/30 text-emerald-600 dark:text-emerald-400 bg-emerald-500/5"
+                        className="text-[10px] font-mono border-primary/20 text-primary bg-primary/5"
                       >
                         {step.tag}
                       </Badge>
@@ -347,7 +335,7 @@ export default async function Page() {
         <BlurFade delay={BLUR_FADE_DELAY * 15}>
           <div className="glass-panel space-y-5 rounded-2xl border p-6 text-center sm:p-10">
             <div className="inline-flex items-center gap-1.5 rounded-full border border-border bg-background px-3 py-1 text-xs text-muted-foreground">
-              <MapPin className="size-3 text-cyan-500" />
+              <MapPin className="size-3 text-primary" />
               <span>{DATA.location}</span>
             </div>
 
@@ -363,7 +351,7 @@ export default async function Page() {
             <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
               <CopyEmailButton
                 email={DATA.contact.email}
-                variant="pill"
+                variant="icon"
                 className="glass-button"
               />
 
