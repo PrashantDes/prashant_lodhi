@@ -44,7 +44,7 @@ export default async function Page() {
               />
 
               <BlurFadeText
-                className="max-w-[620px] text-muted-foreground text-sm sm:text-lg leading-relaxed pt-1"
+                className="max-w-[620px] text-foreground text-sm sm:text-lg leading-relaxed pt-1"
                 delay={BLUR_FADE_DELAY * 1.5}
                 text={DATA.description}
               />
@@ -55,7 +55,7 @@ export default async function Page() {
                     href="/Prashant_Lodhi_Resume.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="glass-button inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold text-foreground"
+                    className="glass-button resume-button inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold"
                   >
                     <FileText className="size-4" />
                     Resume

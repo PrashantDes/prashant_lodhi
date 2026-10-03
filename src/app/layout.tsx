@@ -62,7 +62,7 @@ export default function RootLayout({
         )}
       >
         <div className="portfolio-atmosphere" aria-hidden="true" />
-        <ThemeProvider attribute="class" defaultTheme="dark">
+        <ThemeProvider attribute="class" defaultTheme="light">
           <TooltipProvider delayDuration={0}>
             <div className="relative z-10 mx-auto max-w-4xl px-6 py-12 sm:py-20">
               {children}
