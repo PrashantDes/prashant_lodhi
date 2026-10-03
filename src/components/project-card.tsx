@@ -318,7 +318,12 @@ export function ProjectCard({
                 key={idx}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 rounded-lg border border-border/80 px-2.5 py-1 text-xs font-medium text-muted-foreground hover:text-foreground hover:bg-accent hover:border-foreground/20 transition-all duration-200"
+                className={cn(
+                  "inline-flex items-center gap-1.5 rounded-lg border px-2.5 py-1 text-xs font-medium transition-all duration-200",
+                  item.type === "Source"
+                    ? "border-black bg-black text-white hover:border-black hover:bg-black hover:text-white"
+                    : "border-border/80 text-muted-foreground hover:border-foreground/20 hover:bg-accent hover:text-foreground"
+                )}
               >
                 {item.icon}
                 <span>{item.type}</span>

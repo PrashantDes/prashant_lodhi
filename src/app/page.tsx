@@ -137,7 +137,16 @@ export default async function Page() {
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 4}>
             <div className="glass-panel rounded-xl border p-5">
-              <Markdown className="prose max-w-full text-pretty font-sans text-sm sm:text-base text-muted-foreground dark:prose-invert leading-relaxed">
+              <Markdown
+                className="prose max-w-full text-pretty font-sans text-sm sm:text-base text-muted-foreground dark:prose-invert leading-relaxed"
+                components={{
+                  strong: ({ children }) => (
+                    <strong className="font-semibold text-black dark:text-white">
+                      {children}
+                    </strong>
+                  ),
+                }}
+              >
                 {DATA.summary}
               </Markdown>
             </div>
@@ -184,7 +193,7 @@ export default async function Page() {
                         <Badge
                           key={skill}
                           variant="secondary"
-                          className="px-2 py-0.5 text-[11px] font-normal rounded-md border-border/60 bg-muted/60 text-muted-foreground group-hover:text-foreground transition-colors"
+                          className="rounded-md border-black bg-black px-2 py-0.5 text-[11px] font-normal text-white transition-colors hover:bg-black hover:text-white"
                         >
                           {skill}
                         </Badge>

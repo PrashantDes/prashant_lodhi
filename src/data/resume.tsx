@@ -20,7 +20,7 @@ export const DATA = {
   description:
     "Data Analyst with a scientist's curiosity for patterns. I turn raw transactional data into clean insights, interactive dashboards, and business decisions.",
   summary:
-    "I studied Biotechnology, then shifted my focus toward data analytics — the parts of science I liked most were always the numbers and the patterns they revealed. Since then I've been building a practical toolkit: Python for data cleaning and analysis, SQL for pulling and shaping data, and Power BI and Excel for turning it into dashboards people actually use.\n\nI'm early in my career and learning in public — building real projects, working through statistics fundamentals properly, and getting comfortable with the tools analysts use day to day, rather than collecting certificates for their own sake.",
+    "I studied Biotechnology, then shifted my focus toward **data analytics** — the parts of science I liked most were always **the numbers and the patterns they revealed.** Since then I've been building a practical toolkit: **Python** for data cleaning and analysis, **SQL** for pulling and shaping data, and **Power BI and Excel** for turning it into dashboards people actually use.\n\nI'm early in my career and **learning in public — building real projects,** working through statistics fundamentals properly, and getting comfortable with the tools analysts use day to day, rather than collecting certificates for their own sake.",
   avatarUrl: "/avatar.avif",
 
   metrics: [
