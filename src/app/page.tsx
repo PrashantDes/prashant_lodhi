@@ -193,7 +193,7 @@ export default async function Page() {
                         <Badge
                           key={skill}
                           variant="secondary"
-                          className="rounded-md border-black bg-black px-2 py-0.5 text-[11px] font-normal text-white transition-colors hover:bg-black hover:text-white"
+                          className="rounded-md border-black bg-black px-2 py-0.5 text-[11px] font-normal text-white transition-colors hover:bg-black hover:text-white dark:border-white dark:bg-white dark:text-black dark:hover:bg-white dark:hover:text-black"
                         >
                           {skill}
                         </Badge>
