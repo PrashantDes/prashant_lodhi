@@ -167,6 +167,49 @@ function ProjectGraphicFallback({ title }: { title: string }) {
     );
   }
 
+  if (title.toLowerCase().includes("clinical") || title.toLowerCase().includes("trial")) {
+    return (
+      <div className="relative h-44 w-full overflow-hidden bg-gradient-to-br from-neutral-900 via-neutral-950 to-neutral-900 p-4 text-white flex flex-col justify-between border-b border-border/40 select-none">
+        <div className="absolute inset-0 bg-[radial-gradient(#f59e0b_1px,transparent_1px)] [background-size:16px_16px] opacity-15" />
+        <div className="relative flex items-center justify-between">
+          <div className="inline-flex items-center gap-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 px-2.5 py-0.5 text-[11px] font-medium text-amber-400">
+            <LineChart className="size-3" />
+            <span>Healthcare BI & Logistic Regression</span>
+          </div>
+          <span className="text-[10px] font-mono text-neutral-400">289.5K Studies</span>
+        </div>
+
+        <div className="relative grid grid-cols-3 gap-2">
+          <div className="rounded-lg bg-neutral-800/80 border border-neutral-700/60 p-2">
+            <p className="text-[10px] text-neutral-400">Term. Rate</p>
+            <p className="text-sm font-bold text-white">10.3%</p>
+            <span className="text-[9px] text-amber-300">29.9K Terminated</span>
+          </div>
+          <div className="rounded-lg bg-neutral-800/80 border border-neutral-700/60 p-2">
+            <p className="text-[10px] text-neutral-400">High Risk</p>
+            <p className="text-sm font-bold text-white">Phase 1/2</p>
+            <span className="text-[9px] text-amber-300">OR 1.85 (p&lt;0.001)</span>
+          </div>
+          <div className="rounded-lg bg-neutral-800/80 border border-neutral-700/60 p-2">
+            <p className="text-[10px] text-neutral-400">Model</p>
+            <p className="text-sm font-bold text-white">Logit</p>
+            <span className="text-[9px] text-neutral-300">Star Schema</span>
+          </div>
+        </div>
+
+        <div className="relative flex items-end gap-1.5 h-7 pt-1">
+          {[45, 65, 80, 50, 70, 95, 60, 85, 75, 90, 68].map((h, i) => (
+            <div
+              key={i}
+              style={{ height: `${h}%` }}
+              className="flex-1 rounded-t bg-gradient-to-t from-amber-600/40 to-amber-400/90 transition-all hover:to-amber-300"
+            />
+          ))}
+        </div>
+      </div>
+    );
+  }
+
   // Fallback for Expense Tracking System or general data app
   return (
     <div className="relative h-44 w-full overflow-hidden bg-gradient-to-br from-neutral-900 via-neutral-950 to-neutral-900 p-4 text-white flex flex-col justify-between border-b border-border/40 select-none">

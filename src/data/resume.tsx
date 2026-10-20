@@ -24,19 +24,19 @@ export const DATA = {
 
   metrics: [
     {
-      value: "134.5K+",
+      value: "289K+",
       label: "Records Analyzed",
-      subtext: "Booking & revenue trends in Python",
+      subtext: "Clinical trials & booking trends in Python",
     },
     {
       value: "5",
       label: "Domains Modeled",
-      subtext: "Finance, Sales, Supply Chain & Ops",
+      subtext: "Finance, Sales, Supply Chain & Healthcare",
     },
     {
-      value: "3+",
+      value: "6",
       label: "End-to-End Projects",
-      subtext: "Full-stack apps, BI suites & notebooks",
+      subtext: "Full-stack apps, BI suites & ML notebooks",
     },
     {
       value: "100%",
@@ -55,6 +55,7 @@ export const DATA = {
         "Microsoft Power BI",
         "DAX",
         "Power Query",
+        "Microsoft Fabric",
         "Microsoft Excel (Advanced)",
         "Executive Dashboards",
         "Data Storytelling",
@@ -87,6 +88,7 @@ export const DATA = {
         "Seaborn",
         "Jupyter Notebook",
         "FastAPI",
+        "Streamlit",
       ],
     },
     {
@@ -126,7 +128,7 @@ export const DATA = {
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/prashant-lodhi-527412417/",
+        url: "https://www.linkedin.com/in/itsprashantlodhi",
         icon: Icons.linkedin,
         navbar: true,
       },
@@ -298,6 +300,66 @@ export const DATA = {
         },
       ],
       image: "/projects/insurance-performance-analysis.png",
+      video: "",
+    },
+    {
+      title: "Clinical Trial Termination Analysis",
+      href: "https://github.com/PrashantDes/clinical_trial_termination_analysis",
+      dates: "2026",
+      active: true,
+      featured: false,
+      impact: "Healthcare Analytics · 289K+ Trials · Live Power BI Dashboard",
+      description:
+        "Statistical analysis and interactive Power BI dashboard examining 289,595 finished clinical trials from ClinicalTrials.gov (via AACT). Explores early termination drivers across phases, sponsors, and stop reasons using logistic regression and DAX measures.",
+      technologies: [
+        "Power BI",
+        "Python",
+        "DAX",
+        "Logistic Regression",
+        "Statistical Analysis",
+        "Pandas",
+        "Data Modeling",
+      ],
+      links: [
+        {
+          type: "Live Dashboard",
+          href: "https://app.powerbi.com/view?r=eyJrIjoiMzUyZTljOTYtYTA5ZS00M2Q3LWJmY2ItMjUyMGUyNzEzZTFhIiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/PrashantDes/clinical_trial_termination_analysis",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/projects/clinical-trial-termination-analysis.png",
+      video: "",
+    },
+    {
+      title: "Hotel Hospitality Analysis",
+      href: "https://github.com/PrashantDes/hotel-hospitality-analysis",
+      dates: "2026",
+      active: true,
+      featured: false,
+      impact: "Revenue & Occupancy EDA · Python & Pandas · 134.5K Bookings",
+      description:
+        "Exploratory data analysis of 134,500+ luxury hotel bookings across four major cities using Python and Pandas. Uncovered room-class occupancy patterns, weekend vs. weekday surges, revenue leakage across booking platforms, and guest rating disparities.",
+      technologies: [
+        "Python",
+        "Pandas",
+        "Matplotlib",
+        "EDA",
+        "Data Cleaning",
+        "Jupyter Notebook",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/PrashantDes/hotel-hospitality-analysis",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/projects/hotel-hospitality-analysis.png",
       video: "",
     },
   ],
